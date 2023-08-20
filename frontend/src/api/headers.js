@@ -6,7 +6,7 @@ export const headers = (contentType) => {
   headers["Content-Type"] = contentType;
   headers["Access-Control-Allow-Origin"] = "*";
   headers["Access-Control-Allow-Methods"] = "PUT, GET, POST";
-  headers["Access-Control-Allow-Headers"] = `Origin, X-Requested-With, Content-Type, Accept`;
+  headers["Access-Control-Allow-Headers"] = `access-control-allow-headers,access-control-allow-methods,access-control-allow-origin,content-type`;
  }
 
  if (token) {

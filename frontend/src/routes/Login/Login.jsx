@@ -4,7 +4,7 @@ import { Box, Button, Checkbox, FormControlLabel, FormGroup, TextField, Typograp
 import useApi from "../../hooks/useApi";
 
 const Login = () => {
- const api = useApi("/facts/random", "GET");
+ const api = useApi("/users/", "GET");
 
  console.log(api);
 

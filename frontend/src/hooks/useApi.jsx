@@ -23,6 +23,13 @@ const useApi = (endpoint, method, body) => {
  const CORS = "https://cors.noroff.dev/";
  const url = CORS + "http://localhost:5000/api/v1";
 
+ const headerOptions = {
+  "Content-Type": "application/json",
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "PUT, GET, POST",
+  "Access-Control-Allow-Headers": `Origin, X-Requested-With, Content-Type, Accept`,
+ };
+
  useEffect(() => {
   async function getData() {
    try {
@@ -33,6 +40,8 @@ const useApi = (endpoint, method, body) => {
      headers: headers("application/json"),
      body: JSON.stringify(body),
     });
+    console.log("fetchedData:", fetchedData);
+
     const json = await fetchedData.json();
     setData(json);
    } catch (error) {
