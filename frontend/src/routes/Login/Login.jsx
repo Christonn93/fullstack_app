@@ -6,7 +6,8 @@ import useApi from "../../hooks/useApi";
 const Login = () => {
  const api = useApi("/users/", "GET");
 
- console.log(api);
+//  console.log("console.log api:", api);
+ console.log("console.log api.data:", api.data);
 
  const onClickHandler = () => {
   alert("clicked");
