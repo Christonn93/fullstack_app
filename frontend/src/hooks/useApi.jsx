@@ -19,6 +19,7 @@ const useApi = (endpoint, method, body) => {
  const [isLoading, setIsLoading] = useState(false);
  const [isError, setIsError] = useState(false);
 
+ //  const url = "https://cat-fact.herokuapp.com"; // Test api for testing of function
  const CORS = "https://cors.noroff.dev/";
  const url = CORS + "http://localhost:5000/api/v1";
 

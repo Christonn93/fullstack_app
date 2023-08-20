@@ -4,9 +4,9 @@ import { Box, Button, Checkbox, FormControlLabel, FormGroup, TextField, Typograp
 import useApi from "../../hooks/useApi";
 
 const Login = () => {
- const api = useApi("/users/", "GET");
+ const api = useApi("/facts/random", "GET");
 
- console.log("This is the response data", api.data);
+ console.log(api);
 
  const onClickHandler = () => {
   alert("clicked");
