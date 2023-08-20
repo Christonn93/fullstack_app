@@ -27,7 +27,7 @@ const useApi = (endpoint, method, body) => {
   "Content-Type": "application/json",
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "PUT, GET, POST",
-  "Access-Control-Allow-Headers": `Origin, X-Requested-With, Content-Type, Accept`,
+  "Access-Control-Allow-Headers": "Origin",
  };
 
  useEffect(() => {
