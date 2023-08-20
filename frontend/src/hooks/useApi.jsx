@@ -19,15 +19,15 @@ const useApi = (endpoint, method, body) => {
  const [isLoading, setIsLoading] = useState(false);
  const [isError, setIsError] = useState(false);
 
- const url = "http://localhost:5000/api/v1";
  const CORS = "https://cors.noroff.dev/";
+ const url = CORS + "http://localhost:5000/api/v1";
 
  useEffect(() => {
   async function getData() {
    try {
     setIsLoading(true);
     setIsError(false);
-    const fetchedData = await fetch(CORS + url + endpoint, {
+    const fetchedData = await fetch(url + endpoint, {
      method: method,
      headers: headers("application/json"),
      body: JSON.stringify(body),
