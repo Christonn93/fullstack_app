@@ -40,8 +40,6 @@ const useApi = (endpoint, method, body) => {
      headers: headers("application/json"),
      body: JSON.stringify(body),
     });
-    console.log("fetchedData:", fetchedData);
-
     const json = await fetchedData.json();
     setData(json);
    } catch (error) {
