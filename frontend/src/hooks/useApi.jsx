@@ -21,7 +21,7 @@ const useApi = (endpoint, method, body) => {
 
  //  const url = "https://cat-fact.herokuapp.com"; // Test api for testing of function
  const CORS = "https://cors.noroff.dev/";
- const url = CORS + "http://localhost:5000/api/v1";
+ const url = "http://localhost:5000/api/v1";
 
  const headerOptions = {
   "Content-Type": "application/json",

@@ -1,12 +1,14 @@
 const express = require("express");
+const cors = require('cors')
 const { verifyJwt } = require("./auth/checkAuth");
 
 const usersRoutes = require("./src/users/routes");
 
 const app = express();
-const port = process.env.PORT || 5000 ;
-
 app.use(express.json());
+app.use(cors());
+
+const port = process.env.PORT || 5000;
 
 app.get("/api/v1/", (req, res) => {
  res.status(200).send("Api is responding with connected");

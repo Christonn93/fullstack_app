@@ -1,8 +1,7 @@
 const pool = require("../../database");
 const queries = require("./queries");
 
-const getUsers = (req, res) => {
- res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000/");
+const getUsers = async (req, res) => {
  pool.query(queries.getUsers, (error, results) => {
   if (error) throw error;
   res.status(200).json(results.rows);
